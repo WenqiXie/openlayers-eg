@@ -84,15 +84,20 @@ var popMessage = function(selectedF, popupElement, coordinate) {
       'html': true,
       'content': `
         <p>id: ${form.id}</p>
-        <p>id: ${form.message}</p>
+        <p>message: ${form.message}</p>
+        <button data-id=${form.id} id="delete-message" type="button" name="button">删除这个message</button>
       `
       // '<p>The location you clicked was:</p><code>' + coordinate + '</code>'
     });
     $(popupElement).popover('show');
+    $('#delete-message').one('click', function(e) {
+      console.log('删除这个message');
+      let target = e.target
+      let targetId = target.dataset.id
+      console.log('targetId', targetId);
+    })
   }
 }
-
-
 
 
 

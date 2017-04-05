@@ -25,6 +25,7 @@ var featureOverlay = new ol.layer.Vector({
 });
 featureOverlay.setMap(map);
 
+// 添加 feature 的方法，其实 Point
 var newFeature = function(form) {
   var f;
   switch (form.type) {
@@ -71,9 +72,9 @@ var addFeatures = function() {
 
   }
 }
-addFeatures()
-
-
+if (localStorage.messages) {
+  addFeatures()
+}
 
 
 
@@ -201,7 +202,6 @@ var saveMessage = function(form) {
     console.log('id 已经被占用，请换一个 id');
     alert('id 已经被占用，请换一个 id')
   } else {
-
     forms[id] = form
     console.log('forms', forms);
     var forms = JSON.stringify(forms)
@@ -267,9 +267,6 @@ addInteraction();
  })
  // 此处不再为feature设置style
  featuresSource.addFeature(circle2);
-
-
-
 
 
 

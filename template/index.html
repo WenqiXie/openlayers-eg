@@ -20,9 +20,9 @@
        min-width: 180px;
      }
     </style>
-    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="build/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="build/bootstrap.min.js"></script>
   </head>
   <body>
     <!-- <h2>
@@ -43,8 +43,8 @@
     <form class="form-inline">
       <label>Action type &nbsp;</label>
       <select id="select-type">
-        <option value="none" selected>None</option>
-        <option value="click">Click</option>
+        <option value="click" selected>Click</option>
+        <option value="none">None</option>
       </select>
       <span id="status">&nbsp;0 selected features</span>
     </form>
@@ -73,14 +73,15 @@
     <div class="">
       <p>id: ${form.id}</p>
       <p>message: ${form.message}</p>
+      <button id="" type="button" name="button"></button>
     </div>
 
     <script src="build/ol-debug.js" type="text/javascript"></script>
-    <script src="js/main/interaction.js" charset="utf-8"></script>
+    <!-- <script src="js/main/interaction.js" charset="utf-8"></script> -->
     <script src="js/main/init.js" charset="utf-8"></script>
     <script src="js/main/draw_and_modify.js" charset="utf-8"></script>
-    <script src="js/main/addOverlay_position.js" charset="utf-8"></script>
+    <!-- <script src="js/main/addOverlay_position.js" charset="utf-8"></script> -->
     <script src="js/main/select_and_pop.js" charset="utf-8"></script>
-    <script src="js/main/custom_interaction.js" charset="utf-8"></script>
+    <!-- <script src="js/main/custom_interaction.js" charset="utf-8"></script> -->
   </body>
 </html>

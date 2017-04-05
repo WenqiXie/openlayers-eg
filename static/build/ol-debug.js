@@ -77120,11 +77120,13 @@ ol.source.Zoomify = function(opt_options) {
   var tierSizeCalculation = options.tierSizeCalculation !== undefined ?
       options.tierSizeCalculation :
       ol.source.Zoomify.TierSizeCalculation_.DEFAULT;
+      console.log('tierSizeCalculation', tierSizeCalculation);
 
   var imageWidth = size[0];
   var imageHeight = size[1];
   var tierSizeInTiles = [];
   var tileSize = ol.DEFAULT_TILE_SIZE;
+  console.log('tileSize', tileSize);
 
   switch (tierSizeCalculation) {
     case ol.source.Zoomify.TierSizeCalculation_.DEFAULT:
@@ -77134,6 +77136,7 @@ ol.source.Zoomify = function(opt_options) {
           Math.ceil(imageHeight / tileSize)
         ]);
         tileSize += tileSize;
+        console.log('tileSize', tileSize);
       }
       break;
     case ol.source.Zoomify.TierSizeCalculation_.TRUNCATED:
@@ -77146,6 +77149,9 @@ ol.source.Zoomify = function(opt_options) {
         ]);
         width >>= 1;
         height >>= 1;
+        console.log('tileSize', tileSize);
+        console.log('width height', width, height);
+
       }
       break;
     default:
@@ -77155,6 +77161,7 @@ ol.source.Zoomify = function(opt_options) {
 
   tierSizeInTiles.push([1, 1]);
   tierSizeInTiles.reverse();
+  console.log('tierSizeInTiles', tierSizeInTiles);
 
   var resolutions = [1];
   var tileCountUpToTier = [0];
@@ -77166,7 +77173,9 @@ ol.source.Zoomify = function(opt_options) {
         tileCountUpToTier[i - 1]
     );
   }
+
   resolutions.reverse();
+  console.log('resolutions', resolutions);
 
   var extent = [0, -size[1], size[0], 0];
   var tileGrid = new ol.tilegrid.TileGrid({

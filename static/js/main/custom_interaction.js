@@ -1,4 +1,4 @@
-var pointFeature = new ol.Feature(new ol.geom.Point([66467.43255275112,-39534.11226989936]));
+var pointFeature = new ol.Feature(new ol.geom.Point([36467.43255275112,-19534.11226989936]));
 
 // var lineFeature = new ol.Feature(
 //     new ol.geom.LineString([[-1e7, 1e6], [-1e6, 3e6]]));
@@ -41,7 +41,7 @@ map.addLayer(layer2);
 
 // 在地图上添加一个图标
 var tubc = new ol.Feature({
-  geometry: new ol.geom.Point([75869.18703182775,-62618.09481202264]),
+  geometry: new ol.geom.Point([25869.18703182775,-12618.09481202264]),
 })
 var iconStyle = new ol.style.Style({
   image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
