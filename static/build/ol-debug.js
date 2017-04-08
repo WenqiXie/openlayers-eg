@@ -77136,7 +77136,6 @@ ol.source.Zoomify = function(opt_options) {
           Math.ceil(imageHeight / tileSize)
         ]);
         tileSize += tileSize;
-        console.log('tileSize', tileSize);
       }
       break;
     case ol.source.Zoomify.TierSizeCalculation_.TRUNCATED:
@@ -77161,7 +77160,7 @@ ol.source.Zoomify = function(opt_options) {
 
   tierSizeInTiles.push([1, 1]);
   tierSizeInTiles.reverse();
-  console.log('tierSizeInTiles', tierSizeInTiles);
+  console.log('tierSizeInTiles.length', tierSizeInTiles.length);
 
   var resolutions = [1];
   var tileCountUpToTier = [0];
